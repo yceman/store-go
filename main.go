@@ -23,6 +23,13 @@ func main() {
 			log.Panicln(err.Error())
 		}
 	}
+
+	//Imprime do arquivo de conf
 	conf := config.NewConfig(default_config)
+
+	//Imprime em json
+	data, _ := json.Marshal(conf)
+
+	fmt.Println(string(data))
 	fmt.Println(conf)
 }

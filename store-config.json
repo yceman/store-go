@@ -1,0 +1,14 @@
+{
+    "srv_port": "8080",
+    "web_ui": true,
+    "open_browser": true,
+    "mode": "production",
+    "db_config": {
+        "db_drive": "sqlite3",
+        "db_host": "",
+        "db_port": "",
+        "db_user": "",
+        "db_pass": "",
+        "db_name": "db.sqlite3"
+    }
+}

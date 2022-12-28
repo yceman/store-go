@@ -12,22 +12,22 @@ const (
 )
 
 type Config struct {
-	SRV_PORT    string
-	WEB_UI      bool
-	OpenBrowser bool
-	Mode        string
+	SRV_PORT    string `json:"srv_port"`
+	WEB_UI      bool   `json:"web_ui"`
+	OpenBrowser bool   `json:"open_browser"`
+	Mode        string `json:"mode"`
 
-	DBConfig
+	DBConfig `json:"db_config"`
 }
 
 type DBConfig struct {
-	DB_DRIVE string
-	DB_HOST  string
-	DB_PORT  string
-	DB_USER  string
-	DB_PASS  string
-	DB_NAME  string
-	DB_DSN   string
+	DB_DRIVE string `json:"db_drive"`
+	DB_HOST  string `json:"db_host"`
+	DB_PORT  string `json:"db_port"`
+	DB_USER  string `json:"db_user"`
+	DB_PASS  string `json:"db_pass"`
+	DB_NAME  string `json:"db_name"`
+	DB_DSN   string `json:"-"`
 }
 
 func NewConfig(config *Config) *Config {
